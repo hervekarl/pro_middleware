@@ -1,0 +1,13 @@
+/Users/apple/Documents/Projet_intergiciel/ProSpringBoot/Authentification/src/main/java/com/herve/pro/intergiciel/Authentification/AuthentificationApplication.java
+/Users/apple/Documents/Projet_intergiciel/ProSpringBoot/Authentification/src/main/java/com/herve/pro/intergiciel/Authentification/Controllers/AuthController.java
+/Users/apple/Documents/Projet_intergiciel/ProSpringBoot/Authentification/src/main/java/com/herve/pro/intergiciel/Authentification/DTO/CreateUserDTO.java
+/Users/apple/Documents/Projet_intergiciel/ProSpringBoot/Authentification/src/main/java/com/herve/pro/intergiciel/Authentification/DTO/UserLoginDTO.java
+/Users/apple/Documents/Projet_intergiciel/ProSpringBoot/Authentification/src/main/java/com/herve/pro/intergiciel/Authentification/Modele/Users.java
+/Users/apple/Documents/Projet_intergiciel/ProSpringBoot/Authentification/src/main/java/com/herve/pro/intergiciel/Authentification/Repositories/UserRepository.java
+/Users/apple/Documents/Projet_intergiciel/ProSpringBoot/Authentification/src/main/java/com/herve/pro/intergiciel/Authentification/Response/LoginResponse.java
+/Users/apple/Documents/Projet_intergiciel/ProSpringBoot/Authentification/src/main/java/com/herve/pro/intergiciel/Authentification/Service/AuthenticationService.java
+/Users/apple/Documents/Projet_intergiciel/ProSpringBoot/Authentification/src/main/java/com/herve/pro/intergiciel/Authentification/Service/JwtService.java
+/Users/apple/Documents/Projet_intergiciel/ProSpringBoot/Authentification/src/main/java/com/herve/pro/intergiciel/Authentification/Service/UserService.java
+/Users/apple/Documents/Projet_intergiciel/ProSpringBoot/Authentification/src/main/java/com/herve/pro/intergiciel/Authentification/configJWT/JWTAuthFilter.java
+/Users/apple/Documents/Projet_intergiciel/ProSpringBoot/Authentification/src/main/java/com/herve/pro/intergiciel/Authentification/configJWT/JWTConfig.java
+/Users/apple/Documents/Projet_intergiciel/ProSpringBoot/Authentification/src/main/java/com/herve/pro/intergiciel/Authentification/configJWT/JWTSecurity.java

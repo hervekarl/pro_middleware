@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AuthentificationApplication<Authentification>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.herve.pro.intergiciel.Authentification.AuthentificationApplication",
+            "projectName": "Authentification",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
