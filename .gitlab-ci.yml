@@ -1,0 +1,34 @@
+stages:
+  - build
+  - test
+
+variables:
+  MAVEN_CLI_OPTS: "-B -DskipTests"
+
+build_mygateway:
+  stage: build
+  script:
+    - echo "Building  gateway..."
+    - cd mygateway
+    - mvn $MAVEN_CLI_OPTS clean package
+
+build_resourcehumaine:
+  stage: build
+  script:
+    - echo "Building resourcehumaine microservice..."
+    - cd resourcehumaine
+    - mvn $MAVEN_CLI_OPTS clean package
+
+test_patient:
+  stage: test
+  script:
+    - echo "Testing patient microservice..."
+    - cd patient
+    - mvn test
+
+test_resourcehumaine:
+  stage: test
+  script:
+    - echo "Testing resourcehumaine microservice..."
+    - cd resourcehumaine
+    - mvn test

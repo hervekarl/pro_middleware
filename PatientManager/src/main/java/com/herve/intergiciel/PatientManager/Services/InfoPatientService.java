@@ -3,7 +3,9 @@ package com.herve.intergiciel.PatientManager.Services;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.herve.intergiciel.PatientManager.Exceptions.PatientErrorExceptions;
 import com.herve.intergiciel.PatientManager.Modeles.InfoPatient;
 import com.herve.intergiciel.PatientManager.Repositories.InfoPatientRepository;
 
@@ -14,28 +16,46 @@ import lombok.AllArgsConstructor;
 public class InfoPatientService {
     private InfoPatientRepository infoPatientRepository;
 
-    public void create(InfoPatient infoPatient){
-        this.infoPatientRepository.save(infoPatient);
+    public InfoPatient create(InfoPatient infoPatient) {
+        return this.infoPatientRepository.save(infoPatient);
     }
 
-    public List<InfoPatient> search(){
+    public List<InfoPatient> search() {
         return this.infoPatientRepository.findAll();
     }
 
-    public InfoPatient update( InfoPatient infoPatient) {
-        if (infoPatientRepository.existsById(infoPatient.getIdPat())) {
-            return infoPatientRepository.save(infoPatient);
+    // @Transactional(readOnly = true)
+
+    public InfoPatient serchPatientById(Long id){
+
+        return infoPatientRepository.findById(id)
+            .orElseThrow(()-> new PatientErrorExceptions(" Not patient with ID "+id));
+        
+    }
+
+    public InfoPatient updatePatient(Long id, InfoPatient infoPatient) {
+        InfoPatient patientToUpdate = infoPatientRepository.findById(id)
+                .orElseThrow(() -> new PatientErrorExceptions("Historique non trouvé avec l'ID : " + id));
+
+
+        patientToUpdate.setName(infoPatient.getName());
+        patientToUpdate.setPrenom(infoPatient.getPrenom());
+        patientToUpdate.setTel(infoPatient.getTel());
+        patientToUpdate.setDateN(infoPatient.getDateN());
+        patientToUpdate.setEmail(infoPatient.getEmail());
+        patientToUpdate.setGroupeSanguin(infoPatient.getGroupeSanguin());
+        patientToUpdate.setSexe(infoPatient.getSexe());
+        patientToUpdate.setAddr(infoPatient.getAddr());
+
+        return infoPatientRepository.save(patientToUpdate);
+    }
+
+    public void delete(Long id) {
+        if (!infoPatientRepository.existsById(id)) {
+            throw new PatientErrorExceptions("Patient not found");
         } else {
-            throw new IllegalArgumentException("Patient not found");
+            infoPatientRepository.deleteById(id);
         }
     }
 
-    public void delete( InfoPatient infoPatient) {
-        if (infoPatientRepository.existsById(infoPatient.getIdPat())) {
-            infoPatientRepository.deleteById(infoPatient.getIdPat());
-        } else {
-            throw new IllegalArgumentException("Patient not found");
-        }
-    }
-    
 }

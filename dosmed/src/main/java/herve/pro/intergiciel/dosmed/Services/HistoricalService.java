@@ -21,7 +21,7 @@ public class HistoricalService {
         try {
             return historicalRepository.save(historical);
         } catch (DataIntegrityViolationException e) {
-            throw new IllegalArgumentException("Violation de contrainte : " + e.getMessage());
+            throw new HistoricalNotFoundException("Violation de contrainte : " + e.getMessage());
         }
     }
 

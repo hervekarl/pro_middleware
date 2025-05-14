@@ -31,7 +31,7 @@ public class InfoPatient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idPat;
+    private Long idPat;
 
     @NotNull(message = "Ce champ est obligatoire")
     private String name;
