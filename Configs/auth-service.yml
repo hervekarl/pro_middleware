@@ -6,8 +6,8 @@ spring:
   application:
     name: auth-service
   datasource:
-    # url: jdbc:mysql://localhost:3306/auth
-    url: jdbc:mysql://root:ilIVViBStDbHESuBqyokHVMvDobsyGJN@maglev.proxy.rlwy.net:33278/railway
+    url: jdbc:mysql://localhost:3306/auth
+    # url: jdbc:mysql://root:ilIVViBStDbHESuBqyokHVMvDobsyGJN@maglev.proxy.rlwy.net:33278/railway
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
