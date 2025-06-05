@@ -2,7 +2,7 @@ package com.herve.intergiciel.PatientManager.DTO;
 
 import com.herve.intergiciel.PatientManager.Enum.Genre;
 import com.herve.intergiciel.PatientManager.Enum.GroupeSanguin;
-import com.herve.intergiciel.PatientManager.Modeles.InfoPatient;
+import com.herve.intergiciel.PatientManager.Modeles.Patient;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,7 +24,7 @@ public class DtoPatient {
     private String image;
 
     // 🔁 Ajoute cette méthode ici
-    public static DtoPatient fromEntity(InfoPatient patient) {
+    public static DtoPatient fromEntity(Patient patient) {
         return new DtoPatient(
             patient.getIdPat(),
             patient.getName(),
