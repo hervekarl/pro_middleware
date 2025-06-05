@@ -52,7 +52,11 @@
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 
+<<<<<<< HEAD
 		<!-- <dependency>
+=======
+<!-- 		<dependency>
+>>>>>>> 2ece86138722220f80e7801864adef0907ca0ab5
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>

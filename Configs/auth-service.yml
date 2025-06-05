@@ -1,0 +1,36 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: auth-service
+  datasource:
+    username: auth_htmx_user
+    password: qDdbNDIspJXGntagaEDXe4ciHTWHaESi
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    healthcheck:
+      enabled: true
+    fetch-registry: true
+    register-with-eureka: true
+
+security:
+  jwt:
+    secret-key: b0b0f08db683aff4af2e942f90f2c1fbd844481a6e79cd98a06717b4af3b4f01
+    expiration-time: 86400000 # 24 heures en millisecondes
