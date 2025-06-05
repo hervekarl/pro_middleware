@@ -5,6 +5,7 @@ spring:
   application:
     name: auth-service
   datasource:
+    url: jdbc:postgresql://dpg-d0uphcbipnbc73epda20-a.oregon-postgres.render.com:5432/auth_htmx
     username: auth_htmx_user
     password: qDdbNDIspJXGntagaEDXe4ciHTWHaESi
     driver-class-name: org.postgresql.Driver
