@@ -3,6 +3,7 @@ package com.herve.intergiciel.RHManager.RHServices;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.herve.intergiciel.RHManager.Exceptions.EmployeNotFoundException;
 import com.herve.intergiciel.RHManager.Modeles.Employe;
@@ -53,6 +54,15 @@ public class EmployeService {
             throw new EmployeNotFoundException("Not Employe with ID "+id);
         }
         employesRepository.deleteById(id);
+    }
+
+    public boolean employerExists(Long id){
+        if (employesRepository.existsById(id)) {
+            return true;
+        } else {
+            throw new EmployeNotFoundException("Not Employe with ID "+id);
+            
+        }
     }
     
 

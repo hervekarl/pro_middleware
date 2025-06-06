@@ -1,6 +1,8 @@
 package com.herve.intergiciel.PatientManager.Modeles;
 
 
+import java.sql.Date;
+
 import com.herve.intergiciel.PatientManager.Enum.Genre;
 import com.herve.intergiciel.PatientManager.Enum.GroupeSanguin;
 
@@ -38,9 +40,6 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPat;
 
-    @Column(name = "image", nullable = true)
-    private String image;
-
     @NotNull(message = "Ce champ est obligatoire")
     private String name;
     
@@ -55,7 +54,7 @@ public class Patient {
     private Genre sexe;
 
     @Column(name = "date_naissance")
-    private String dateN;
+    private Date dateN;
 
     @Email(message = "Email invalide ou est deja utilisé")
     @Column(unique = true)

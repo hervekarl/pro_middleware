@@ -5,7 +5,7 @@ GREEN="\e[32m"
 RESET="\e[0m"
 
 # Liste des microservices
-services=("PatientManager" "dosmed" "RHManager" "PharmacyManager" "Authentification")
+services=("mygateway" "PatientManager" "dosmed" "RHManager" "PharmacyManager" "Authentification")
 all_services=("${configs[@]}" "${services[@]}")
 
 

@@ -31,60 +31,60 @@ public class PatientController {
         return ResponseEntity.ok(infoPatientService.create(infoPatient));
     }
 
-    @PostMapping(path = "/upload", consumes = "multipart/form-data")
-    public String uploadFile(MultipartFile file) {
-        if (file.isEmpty()) {
-            throw new PatientErrorExceptions("Le fichier est vide");
-        }
-        try {
-            String uploadDir = "uploads/";
-            Path uploadPath = Paths.get(uploadDir);
-            if (!Files.exists(uploadPath)) {
-                Files.createDirectories(uploadPath);
-            }
-            String fileName = file.getOriginalFilename();
-            Path filePath = uploadPath.resolve(fileName);
-            Files.copy(file.getInputStream(), filePath);
-            return filePath.toString(); // retourne le chemin complet
-        } catch (IOException e) {
-            throw new PatientErrorExceptions("Erreur lors de l'upload du fichier : " + e.getMessage());
-        }
-    }
- @GetMapping("/upload")
-    public ResponseEntity<?> getUploadFiles() {
-        String uploadDir = "uploads/";
-        Path uploadPath = Paths.get(uploadDir);
+//     @PostMapping(path = "/upload", consumes = "multipart/form-data")
+//     public String uploadFile(MultipartFile file) {
+//         if (file.isEmpty()) {
+//             throw new PatientErrorExceptions("Le fichier est vide");
+//         }
+//         try {
+//             String uploadDir = "uploads/";
+//             Path uploadPath = Paths.get(uploadDir);
+//             if (!Files.exists(uploadPath)) {
+//                 Files.createDirectories(uploadPath);
+//             }
+//             String fileName = file.getOriginalFilename();
+//             Path filePath = uploadPath.resolve(fileName);
+//             Files.copy(file.getInputStream(), filePath);
+//             return filePath.toString(); // retourne le chemin complet
+//         } catch (IOException e) {
+//             throw new PatientErrorExceptions("Erreur lors de l'upload du fichier : " + e.getMessage());
+//         }
+//     }
+//  @GetMapping("/upload")
+//     public ResponseEntity<?> getUploadFiles() {
+//         String uploadDir = "uploads/";
+//         Path uploadPath = Paths.get(uploadDir);
 
-        if (!Files.exists(uploadPath) || !Files.isDirectory(uploadPath)) {
-            return ResponseEntity.notFound().build();
-        }
+//         if (!Files.exists(uploadPath) || !Files.isDirectory(uploadPath)) {
+//             return ResponseEntity.notFound().build();
+//         }
 
-        try {
-            List<String> fileNames = Files.list(uploadPath)
-                .filter(Files::isRegularFile)
-                .map(path -> path.getFileName().toString())
-                .collect(Collectors.toList());
+//         try {
+//             List<String> fileNames = Files.list(uploadPath)
+//                 .filter(Files::isRegularFile)
+//                 .map(path -> path.getFileName().toString())
+//                 .collect(Collectors.toList());
 
-            return ResponseEntity.ok(fileNames);
-        } catch (IOException e) {
-            return ResponseEntity.internalServerError().body("Erreur lors de la lecture du dossier: " + e.getMessage());
-        }
-    }
+//             return ResponseEntity.ok(fileNames);
+//         } catch (IOException e) {
+//             return ResponseEntity.internalServerError().body("Erreur lors de la lecture du dossier: " + e.getMessage());
+//         }
+//     }
     
-    @GetMapping("/upload/{fileName}")
-    public ResponseEntity<?> getFile(@PathVariable String fileName) {
-        String uploadDir = "uploads/";
-        Path filePath = Paths.get(uploadDir).resolve(fileName);
-        if (!Files.exists(filePath)) {
-            return ResponseEntity.notFound().build();
-        }
-        try {
-            byte[] fileBytes = Files.readAllBytes(filePath);
-            return ResponseEntity.ok(fileBytes);
-        } catch (IOException e) {
-            return ResponseEntity.internalServerError().body("Erreur lors de la lecture du fichier : " + e.getMessage());
-        }
-    }
+//     @GetMapping("/upload/{fileName}")
+//     public ResponseEntity<?> getFile(@PathVariable String fileName) {
+//         String uploadDir = "uploads/";
+//         Path filePath = Paths.get(uploadDir).resolve(fileName);
+//         if (!Files.exists(filePath)) {
+//             return ResponseEntity.notFound().build();
+//         }
+//         try {
+//             byte[] fileBytes = Files.readAllBytes(filePath);
+//             return ResponseEntity.ok(fileBytes);
+//         } catch (IOException e) {
+//             return ResponseEntity.internalServerError().body("Erreur lors de la lecture du fichier : " + e.getMessage());
+//         }
+//     }
 
     @GetMapping(produces = "application/json")
     public ResponseEntity<?> search() {

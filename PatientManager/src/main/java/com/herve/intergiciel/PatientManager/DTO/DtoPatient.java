@@ -1,5 +1,7 @@
 package com.herve.intergiciel.PatientManager.DTO;
 
+import java.sql.Date;
+
 import com.herve.intergiciel.PatientManager.Enum.Genre;
 import com.herve.intergiciel.PatientManager.Enum.GroupeSanguin;
 import com.herve.intergiciel.PatientManager.Modeles.Patient;
@@ -19,9 +21,8 @@ public class DtoPatient {
     private String tel;
     private String addr;
     private Genre sexe;
-    private String dateN;
+    private Date dateN;
     private GroupeSanguin groupeSanguin;
-    private String image;
 
     // 🔁 Ajoute cette méthode ici
     public static DtoPatient fromEntity(Patient patient) {
@@ -33,8 +34,7 @@ public class DtoPatient {
             patient.getAddr(),
             patient.getSexe(),
             patient.getDateN(),
-            patient.getGroupeSanguin(),
-            patient.getImage()
+            patient.getGroupeSanguin()
         );
     }
 }

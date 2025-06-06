@@ -25,8 +25,7 @@ public class PrescriptionsController {
         // Here you would typically call a service to handle the business logic
         // For now, we will just return a new Prescriptions object based on the DTO
 
-        if (prescription.getPatientId() == null || prescription.getDoctorId() == null || 
-            prescription.getMedicaments() == null || prescription.getMedicaments().isEmpty()) {
+        if (prescription.getPatientId() == null || prescription.getMedicaments() == null || prescription.getMedicaments().isEmpty()) {
             return ResponseEntity.badRequest().body(null);
         }
         // Save the prescription to the database (not implemented here)

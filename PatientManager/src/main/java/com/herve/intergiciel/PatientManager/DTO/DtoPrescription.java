@@ -6,11 +6,8 @@ import lombok.Data;
 
 @Data
 public class DtoPrescription {
-
     private Long patientId;
-    private Long doctorId;
+    private Long doctorId; // Doit correspondre à un ID existant dans Doctor
     private List<Long> medicaments;
     private String instructions;
-
 }
-

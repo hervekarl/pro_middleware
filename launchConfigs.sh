@@ -1,5 +1,5 @@
 # Liste des microservices
-configs=("myconfig" "mygateway" "myDiscorveryServer")
+configs=("myconfig" "myDiscorveryServer")
 
 
 # Étape 1 : Démarrage des services de configuration

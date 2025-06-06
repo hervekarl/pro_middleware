@@ -1,4 +1,5 @@
 package com.herve.intergiciel.PharmacyManager.Controller;
+
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -36,7 +37,7 @@ public class MedicamentController {
 
     @PutMapping("/{id}")
     public ResponseEntity<MedicamentDTO> updateMedicament(
-            @PathVariable Long id, 
+            @PathVariable Long id,
             @RequestBody @Valid MedicamentDTO medicamentDTO) {
         MedicamentDTO updatedMedicament = medicamentService.updateMedicament(id, medicamentDTO);
         return ResponseEntity.ok(updatedMedicament);
@@ -48,9 +49,17 @@ public class MedicamentController {
         return ResponseEntity.noContent().build();
     }
 
+    @PostMapping("/verify")
+    public ResponseEntity<Boolean> verifyMedicamentAvailability(@RequestBody List<Long> medicamentIds) {
+        boolean allAvailable = medicamentService.verifyMedicamentAvailability(medicamentIds);
+        return ResponseEntity.ok(allAvailable);
+    }
+
     // @GetMapping("/patient/{patientId}")
-    // public ResponseEntity<List<MedicamentDTO>> getMedicamentsByPatientId(@PathVariable Long patientId) {
-    //     List<MedicamentDTO> medicaments = medicamentService.findByPatientId(patientId);
-    //     return ResponseEntity.ok(medicaments);
+    // public ResponseEntity<List<MedicamentDTO>>
+    // getMedicamentsByPatientId(@PathVariable Long patientId) {
+    // List<MedicamentDTO> medicaments =
+    // medicamentService.findByPatientId(patientId);
+    // return ResponseEntity.ok(medicaments);
     // }
 }

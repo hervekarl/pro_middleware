@@ -50,6 +50,13 @@ public class MedicamentService {
         return modelMapper.map(updatedMedicament, MedicamentDTO.class);
     }
 
+    public boolean verifyMedicamentAvailability(List<Long> medicamentIds) {
+        // Implémentez la logique pour vérifier la disponibilité
+        // Par exemple:
+        return medicamentIds.stream()
+                .allMatch(id -> medicamentRepository.existsById(id));
+    }
+
     public void deleteMedicament(Long id) {
         if (!medicamentRepository.existsById(id)) {
             throw new MedicamentNotFoundException("Medicament not found with id: " + id);
@@ -58,10 +65,11 @@ public class MedicamentService {
     }
 
     // public List<MedicamentDTO> findByPatientId(Long patientId) {
-    //     List<Medicament> medicaments = medicamentRepository.findByPatientId(patientId);
-    //     return medicaments.stream()
-    //             .map(medicament -> modelMapper.map(medicament, MedicamentDTO.class))
-    //             .collect(Collectors.toList());
+    // List<Medicament> medicaments =
+    // medicamentRepository.findByPatientId(patientId);
+    // return medicaments.stream()
+    // .map(medicament -> modelMapper.map(medicament, MedicamentDTO.class))
+    // .collect(Collectors.toList());
     // }
-    
+
 }

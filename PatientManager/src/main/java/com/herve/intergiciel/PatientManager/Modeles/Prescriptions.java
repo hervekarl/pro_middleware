@@ -1,6 +1,7 @@
 package com.herve.intergiciel.PatientManager.Modeles;
 
-import java.sql.Date;
+
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.hibernate.annotations.CreationTimestamp;
@@ -30,19 +31,22 @@ public class Prescriptions {
     @JoinColumn(name = "patient_id", nullable = false)
     private Patient patientId;
 
-    private Long doctorId;
-
     @ElementCollection
     private List<Long> medicaments;
 
     private String instructions;
+    
+    @ManyToOne
+    @JoinColumn(name = "doctor_id")
+    private Doctor doctor;  // Changé de Long doctorId à Doctor doctor
+
 
     @CreationTimestamp
     @Column(updatable = false, name = "date_prescription")
-    private Date datePrescription;
+    private LocalDateTime datePrescription;
 
     @UpdateTimestamp
     @Column(name = "date_modification")
-    private Date dateModification;
+    private LocalDateTime dateModification;
 
 }
