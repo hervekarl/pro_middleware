@@ -38,6 +38,11 @@ public class PatientService {
 
     }
 
+    public boolean patientexists(Long id) {
+        
+        return infoPatientRepository.existsById(id);
+    }
+
     public Patient updatePatient(Long id, Patient infoPatient) {
         Patient patientToUpdate = infoPatientRepository.findById(id)
                 .orElseThrow(() -> new PatientErrorExceptions("Historique non trouvé avec l'ID : " + id));

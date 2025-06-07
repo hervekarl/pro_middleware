@@ -23,16 +23,16 @@ public class DossierController {
 
     @PostMapping("/create")
     public ResponseEntity<?> createDossier(@RequestBody HistoricalRequest request) {
-        Historical historical = new Historical();
-
-        historical.setAllergy(request.getAllergy());
-        historical.setAntecedent(request.getAntecedent());
-        historical.setMalEncours(request.getMalEncours());
-        historical.setDocuments(request.getDocuments());
-        historical.setPatient(request.getPatient());
-
-        Historical saved = historicalService.createHistorical(historical);
-        return ResponseEntity.status(HttpStatus.CREATED).body(saved);
+        try {
+            Historical historical = historicalService.createHistorical(request);
+            return ResponseEntity.status(HttpStatus.CREATED).body(historical);
+        } catch (DataIntegrityViolationException e) {
+            return ResponseEntity.status(HttpStatus.CONFLICT)
+                    .body("Conflit de données : " + e.getMessage());
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError()
+                    .body("Erreur interne : " + e.getMessage());
+        }
     }
 
     @GetMapping("/all")

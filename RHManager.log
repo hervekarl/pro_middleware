@@ -50,28 +50,28 @@
 
  :: Spring Boot ::                (v3.4.4)
 
-2025-06-06T21:35:08.353+02:00  INFO 69483 --- [rh-service] [           main] c.h.i.RHManager.RhManagerApplication     : Starting RhManagerApplication using Java 21.0.7 with PID 69483 (/home/thegriot/Téléchargements/pro/pro_middleware/RHManager/target/classes started by thegriot in /home/thegriot/Téléchargements/pro/pro_middleware/RHManager)
-2025-06-06T21:35:08.381+02:00  INFO 69483 --- [rh-service] [           main] c.h.i.RHManager.RhManagerApplication     : No active profile set, falling back to 1 default profile: "default"
-2025-06-06T21:35:08.833+02:00  INFO 69483 --- [rh-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2025-06-06T21:35:08.864+02:00  INFO 69483 --- [rh-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=rh-service, profiles=[default], label=null, version=null, state=null
-2025-06-06T21:35:18.081+02:00  INFO 69483 --- [rh-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-06T21:35:20.244+02:00  INFO 69483 --- [rh-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2100 ms. Found 1 JPA repository interface.
-2025-06-06T21:35:23.353+02:00  INFO 69483 --- [rh-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ede48393-30ec-3ec7-89ad-bdc1d5a29f2f
-2025-06-06T21:35:32.465+02:00  INFO 69483 --- [rh-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8001 (http)
-2025-06-06T21:35:32.599+02:00  INFO 69483 --- [rh-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-06T21:35:32.612+02:00  INFO 69483 --- [rh-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-06-06T21:35:33.180+02:00  INFO 69483 --- [rh-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-06T21:35:33.198+02:00  INFO 69483 --- [rh-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 24307 ms
-2025-06-06T21:35:38.427+02:00  INFO 69483 --- [rh-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-06T21:35:38.981+02:00  INFO 69483 --- [rh-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
-2025-06-06T21:35:39.311+02:00  INFO 69483 --- [rh-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-06T21:35:43.028+02:00  INFO 69483 --- [rh-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-06T21:35:43.326+02:00  INFO 69483 --- [rh-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-06T21:35:45.939+02:00  INFO 69483 --- [rh-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@515fff35
-2025-06-06T21:35:45.945+02:00  INFO 69483 --- [rh-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-06T21:35:46.253+02:00  WARN 69483 --- [rh-service] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-06T21:35:46.259+02:00  WARN 69483 --- [rh-service] [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-06-06T21:35:46.410+02:00  INFO 69483 --- [rh-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-06-07T12:27:31.560+02:00  INFO 14978 --- [rh-service] [           main] c.h.i.RHManager.RhManagerApplication     : Starting RhManagerApplication using Java 21.0.7 with PID 14978 (/home/thegriot/Téléchargements/pro/pro_middleware/RHManager/target/classes started by thegriot in /home/thegriot/Téléchargements/pro/pro_middleware/RHManager)
+2025-06-07T12:27:31.646+02:00  INFO 14978 --- [rh-service] [           main] c.h.i.RHManager.RhManagerApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-06-07T12:27:32.285+02:00  INFO 14978 --- [rh-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-06-07T12:27:32.300+02:00  INFO 14978 --- [rh-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=rh-service, profiles=[default], label=null, version=null, state=null
+2025-06-07T12:27:42.509+02:00  INFO 14978 --- [rh-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-07T12:27:43.338+02:00  INFO 14978 --- [rh-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 727 ms. Found 1 JPA repository interface.
+2025-06-07T12:27:44.532+02:00  INFO 14978 --- [rh-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ede48393-30ec-3ec7-89ad-bdc1d5a29f2f
+2025-06-07T12:27:49.484+02:00  INFO 14978 --- [rh-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8001 (http)
+2025-06-07T12:27:49.610+02:00  INFO 14978 --- [rh-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-07T12:27:49.615+02:00  INFO 14978 --- [rh-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-06-07T12:27:49.990+02:00  INFO 14978 --- [rh-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-07T12:27:50.007+02:00  INFO 14978 --- [rh-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 17686 ms
+2025-06-07T12:27:54.537+02:00  INFO 14978 --- [rh-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-07T12:27:55.063+02:00  INFO 14978 --- [rh-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-06-07T12:27:55.345+02:00  INFO 14978 --- [rh-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-07T12:27:57.651+02:00  INFO 14978 --- [rh-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-07T12:27:57.850+02:00  INFO 14978 --- [rh-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-07T12:27:59.012+02:00  INFO 14978 --- [rh-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38e052b2
+2025-06-07T12:27:59.027+02:00  INFO 14978 --- [rh-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-07T12:27:59.158+02:00  WARN 14978 --- [rh-service] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-07T12:27:59.166+02:00  WARN 14978 --- [rh-service] [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-06-07T12:27:59.265+02:00  INFO 14978 --- [rh-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0
@@ -79,48 +79,51 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-06-06T21:35:56.243+02:00  INFO 69483 --- [rh-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-06T21:35:57.110+02:00  INFO 69483 --- [rh-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-06T21:36:02.041+02:00  WARN 69483 --- [rh-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-06T21:36:07.985+02:00  INFO 69483 --- [rh-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-06-06T21:36:08.659+02:00  WARN 69483 --- [rh-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-06-06T21:36:08.974+02:00  INFO 69483 --- [rh-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-06-06T21:36:09.928+02:00  INFO 69483 --- [rh-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-06-06T21:36:10.263+02:00  INFO 69483 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-06-06T21:36:10.322+02:00  INFO 69483 --- [rh-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-06T21:36:10.404+02:00  INFO 69483 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-06-06T21:36:10.409+02:00  INFO 69483 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-06-06T21:36:10.409+02:00  INFO 69483 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-06-06T21:36:10.409+02:00  INFO 69483 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-06-06T21:36:10.410+02:00  INFO 69483 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-06-06T21:36:10.410+02:00  INFO 69483 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-06-06T21:36:10.410+02:00  INFO 69483 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-06-06T21:36:15.241+02:00  INFO 69483 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-06-06T21:36:15.268+02:00  INFO 69483 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-06-06T21:36:15.296+02:00  INFO 69483 --- [rh-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-06-06T21:36:15.348+02:00  INFO 69483 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749238575347 with initial instances count: 2
-2025-06-06T21:36:15.503+02:00  INFO 69483 --- [rh-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application RH-SERVICE with eureka with status UP
-2025-06-06T21:36:15.519+02:00  INFO 69483 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749238575519, current=UP, previous=STARTING]
-2025-06-06T21:36:15.525+02:00  INFO 69483 --- [rh-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RH-SERVICE/192.168.43.171:rh-service:8001: registering service...
-2025-06-06T21:36:15.867+02:00  INFO 69483 --- [rh-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8001 (http) with context path '/'
-2025-06-06T21:36:15.890+02:00  INFO 69483 --- [rh-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8001
-2025-06-06T21:36:16.186+02:00  INFO 69483 --- [rh-service] [           main] c.h.i.RHManager.RhManagerApplication     : Started RhManagerApplication in 81.207 seconds (process running for 91.462)
-2025-06-06T21:36:16.281+02:00  INFO 69483 --- [rh-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RH-SERVICE/192.168.43.171:rh-service:8001 - registration status: 204
-2025-06-06T21:41:10.418+02:00  INFO 69483 --- [rh-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-06T21:46:10.446+02:00  INFO 69483 --- [rh-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-06T21:51:10.447+02:00  INFO 69483 --- [rh-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-06T21:54:04.377+02:00  INFO 69483 --- [rh-service] [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application RH-SERVICE with eureka with status DOWN
-2025-06-06T21:54:04.384+02:00  INFO 69483 --- [rh-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749239644384, current=DOWN, previous=UP]
-2025-06-06T21:54:04.388+02:00  INFO 69483 --- [rh-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RH-SERVICE/192.168.43.171:rh-service:8001: registering service...
-2025-06-06T21:54:04.397+02:00  INFO 69483 --- [rh-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RH-SERVICE/192.168.43.171:rh-service:8001 - registration status: 204
-2025-06-06T21:54:04.436+02:00  INFO 69483 --- [rh-service] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-06T21:54:04.453+02:00  INFO 69483 --- [rh-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-06-06T21:54:04.544+02:00  INFO 69483 --- [rh-service] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-06T21:54:04.557+02:00  INFO 69483 --- [rh-service] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-06T21:54:04.711+02:00  INFO 69483 --- [rh-service] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-06T21:54:04.714+02:00  INFO 69483 --- [rh-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-06-06T21:54:07.715+02:00  INFO 69483 --- [rh-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-06-06T21:54:07.786+02:00  INFO 69483 --- [rh-service] [ionShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/RH-SERVICE/192.168.43.171:rh-service:8001": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/RH-SERVICE/192.168.43.171:rh-service:8001": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Connection refused
+2025-06-07T12:28:04.359+02:00  INFO 14978 --- [rh-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-07T12:28:04.601+02:00  INFO 14978 --- [rh-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-07T12:28:06.164+02:00  WARN 14978 --- [rh-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-07T12:28:11.783+02:00  INFO 14978 --- [rh-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-07T12:28:12.081+02:00  WARN 14978 --- [rh-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-07T12:28:12.215+02:00  INFO 14978 --- [rh-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-06-07T12:28:12.532+02:00  INFO 14978 --- [rh-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-06-07T12:28:12.595+02:00  INFO 14978 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-06-07T12:28:12.604+02:00  INFO 14978 --- [rh-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-07T12:28:12.627+02:00  INFO 14978 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-07T12:28:12.627+02:00  INFO 14978 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-07T12:28:12.628+02:00  INFO 14978 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-07T12:28:12.628+02:00  INFO 14978 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-07T12:28:12.628+02:00  INFO 14978 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-07T12:28:12.629+02:00  INFO 14978 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-07T12:28:12.629+02:00  INFO 14978 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-07T12:28:13.985+02:00  INFO 14978 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-06-07T12:28:14.000+02:00  INFO 14978 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-06-07T12:28:14.009+02:00  INFO 14978 --- [rh-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-06-07T12:28:14.025+02:00  INFO 14978 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1749292094024 with initial instances count: 2
+2025-06-07T12:28:14.077+02:00  INFO 14978 --- [rh-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application RH-SERVICE with eureka with status UP
+2025-06-07T12:28:14.081+02:00  INFO 14978 --- [rh-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749292094081, current=UP, previous=STARTING]
+2025-06-07T12:28:14.085+02:00  INFO 14978 --- [rh-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RH-SERVICE/192.168.1.186:rh-service:8001: registering service...
+2025-06-07T12:28:14.202+02:00  INFO 14978 --- [rh-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8001 (http) with context path '/'
+2025-06-07T12:28:14.205+02:00  INFO 14978 --- [rh-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8001
+2025-06-07T12:28:14.320+02:00  INFO 14978 --- [rh-service] [           main] c.h.i.RHManager.RhManagerApplication     : Started RhManagerApplication in 53.103 seconds (process running for 59.808)
+2025-06-07T12:28:14.330+02:00  INFO 14978 --- [rh-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RH-SERVICE/192.168.1.186:rh-service:8001 - registration status: 204
+2025-06-07T12:39:10.072+02:00  INFO 14978 --- [rh-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-07T12:44:10.111+02:00  INFO 14978 --- [rh-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-07T12:44:50.980+02:00  INFO 14978 --- [rh-service] [nio-8001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-07T12:44:50.981+02:00  INFO 14978 --- [rh-service] [nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-07T12:44:50.984+02:00  INFO 14978 --- [rh-service] [nio-8001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+Hibernate: select e1_0.id,e1_0.adresse,e1_0.date_embauche,e1_0.date_naissance,e1_0.email,e1_0.nom,e1_0.prenom,e1_0.sexe,e1_0.telephone from employes e1_0
+2025-06-07T12:45:08.406+02:00  INFO 14978 --- [rh-service] [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application RH-SERVICE with eureka with status DOWN
+2025-06-07T12:45:08.409+02:00  INFO 14978 --- [rh-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1749293108409, current=DOWN, previous=UP]
+2025-06-07T12:45:08.410+02:00  INFO 14978 --- [rh-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RH-SERVICE/192.168.1.186:rh-service:8001: registering service...
+2025-06-07T12:45:08.423+02:00  INFO 14978 --- [rh-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RH-SERVICE/192.168.1.186:rh-service:8001 - registration status: 204
+2025-06-07T12:45:08.541+02:00  INFO 14978 --- [rh-service] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-07T12:45:08.564+02:00  INFO 14978 --- [rh-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-07T12:45:08.671+02:00  INFO 14978 --- [rh-service] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-07T12:45:08.730+02:00  INFO 14978 --- [rh-service] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-07T12:45:08.943+02:00  INFO 14978 --- [rh-service] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-07T12:45:08.945+02:00  INFO 14978 --- [rh-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-06-07T12:45:11.948+02:00  INFO 14978 --- [rh-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-06-07T12:45:12.033+02:00  INFO 14978 --- [rh-service] [ionShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/RH-SERVICE/192.168.1.186:rh-service:8001": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/RH-SERVICE/192.168.1.186:rh-service:8001": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Connection refused
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -197,8 +200,8 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 37 more
 
-2025-06-06T21:54:07.787+02:00  WARN 69483 --- [rh-service] [ionShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/RH-SERVICE/192.168.43.171:rh-service:8001": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Connection refused
-2025-06-06T21:54:07.810+02:00  INFO 69483 --- [rh-service] [ionShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/RH-SERVICE/192.168.43.171:rh-service:8001": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/RH-SERVICE/192.168.43.171:rh-service:8001": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Connection refused
+2025-06-07T12:45:12.033+02:00  WARN 14978 --- [rh-service] [ionShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/RH-SERVICE/192.168.1.186:rh-service:8001": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Connection refused
+2025-06-07T12:45:12.053+02:00  INFO 14978 --- [rh-service] [ionShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/RH-SERVICE/192.168.1.186:rh-service:8001": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/RH-SERVICE/192.168.1.186:rh-service:8001": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Connection refused
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
@@ -276,8 +279,8 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
 	... 38 more
 
-2025-06-06T21:54:07.811+02:00  WARN 69483 --- [rh-service] [ionShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/RH-SERVICE/192.168.43.171:rh-service:8001": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Connection refused
-2025-06-06T21:54:07.811+02:00 ERROR 69483 --- [rh-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RH-SERVICE/192.168.43.171:rh-service:8001 - de-registration failedCannot execute request on any known server
+2025-06-07T12:45:12.053+02:00  WARN 14978 --- [rh-service] [ionShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/RH-SERVICE/192.168.1.186:rh-service:8001": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Connection refused
+2025-06-07T12:45:12.054+02:00 ERROR 14978 --- [rh-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RH-SERVICE/192.168.1.186:rh-service:8001 - de-registration failedCannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
@@ -311,5 +314,5 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116) ~[spring-boot-3.4.4.jar:3.4.4]
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
-2025-06-06T21:54:07.821+02:00  INFO 69483 --- [rh-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-[[1;34mINFO[m] [1m-----------------------
+2025-06-07T12:45:12.064+02:00  INFO 14978 --- [rh-service] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m

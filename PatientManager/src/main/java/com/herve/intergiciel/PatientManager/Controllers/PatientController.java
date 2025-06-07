@@ -117,4 +117,12 @@ public class PatientController {
         infoPatientService.delete(id);
         return ResponseEntity.noContent().build();
     }
+    @PostMapping("/exists/{id}")
+    public ResponseEntity<Boolean> patientExists(@PathVariable Long id) {
+        boolean exists = infoPatientService.patientexists(id);
+        if (!exists) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(exists);
+    }
 }

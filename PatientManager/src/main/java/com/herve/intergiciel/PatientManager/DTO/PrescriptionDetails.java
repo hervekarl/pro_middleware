@@ -10,7 +10,6 @@ import lombok.Data;
 public class PrescriptionDetails {
     private Long patientId;
     private Long doctorId;
-    private String doctorName;
     private List<Long> medicaments;
     private List<Medicaments> medicamentDetails;
     private String instructions;

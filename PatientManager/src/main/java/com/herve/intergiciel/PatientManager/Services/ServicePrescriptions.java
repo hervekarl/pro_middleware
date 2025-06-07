@@ -10,10 +10,11 @@ import com.herve.intergiciel.PatientManager.DTO.DtoPrescription;
 import com.herve.intergiciel.PatientManager.DTO.Medicaments;
 import com.herve.intergiciel.PatientManager.DTO.PrescriptionDetails;
 import com.herve.intergiciel.PatientManager.Exceptions.PatientErrorExceptions;
-import com.herve.intergiciel.PatientManager.Modeles.Doctor;
+// import com.herve.intergiciel.PatientManager.Modeles.Doctor;
 import com.herve.intergiciel.PatientManager.Modeles.Patient;
 import com.herve.intergiciel.PatientManager.Modeles.Prescriptions;
-import com.herve.intergiciel.PatientManager.Repositories.DoctorRepository;
+// import com.herve.intergiciel.PatientManager.Repositories.DoctorRepository;
+import com.herve.intergiciel.PatientManager.Repositories.EmployerClient;
 import com.herve.intergiciel.PatientManager.Repositories.MedicamentClient;
 import com.herve.intergiciel.PatientManager.Repositories.PatientRepository;
 import com.herve.intergiciel.PatientManager.Repositories.PrescriptRepository;
@@ -26,7 +27,8 @@ public class ServicePrescriptions {
     private final PrescriptRepository prescriptRepository;
     private final MedicamentClient medicamentClient;
     private final PatientRepository patientRepository;
-    private final DoctorRepository doctorRepository; // Nouveau repository
+    private final EmployerClient employerExists;
+    // private final DoctorRepository doctorRepository; // Nouveau repository
     
     public Prescriptions savePrescription(DtoPrescription dtoPrescription) {
         // Validation
@@ -41,18 +43,24 @@ public class ServicePrescriptions {
         Patient patient = patientRepository.findById(dtoPrescription.getPatientId())
                 .orElseThrow(() -> new PatientErrorExceptions("Patient not found"));
         
-        Doctor doctor = doctorRepository.findById(dtoPrescription.getDoctorId())
-                .orElseThrow(() -> new PatientErrorExceptions("Doctor not found"));
+        // Doctor doctor = doctorRepository.findById(dtoPrescription.getDoctorId())
+        //         .orElseThrow(() -> new PatientErrorExceptions("Doctor not found"));
 
         // Vérification médicaments
         if (!medicamentClient.verifyMedicamentAvailability(dtoPrescription.getMedicaments())) {
             throw new PatientErrorExceptions("One or more medicaments are not available");
         }
 
+        if (!employerExists.employeExists(dtoPrescription.getDoctorId())) {
+            throw new PatientErrorExceptions("Doctor does not exist");
+            
+        }
+
         // Création prescription
         Prescriptions prescription = new Prescriptions();
+        
         prescription.setPatientId(patient);
-        prescription.setDoctor(doctor); // Utilisation de l'entité Doctor
+        prescription.setDoctor(dtoPrescription.getDoctorId()); // Utilisation de l'entité Doctor
         prescription.setMedicaments(dtoPrescription.getMedicaments());
         prescription.setInstructions(dtoPrescription.getInstructions());
         prescription.setDatePrescription(LocalDateTime.now());
@@ -72,8 +80,7 @@ public class ServicePrescriptions {
 
         PrescriptionDetails details = new PrescriptionDetails();
         details.setPatientId(prescription.getPatientId().getIdPat());
-        details.setDoctorId(prescription.getDoctor().getId()); // Accès via l'entité
-        details.setDoctorName(prescription.getDoctor().getNom() + " " + prescription.getDoctor().getPrenom());
+        details.setDoctorId(prescription.getDoctor());
         details.setMedicaments(prescription.getMedicaments());
         details.setMedicamentDetails(medicamentDetails);
         details.setInstructions(prescription.getInstructions());

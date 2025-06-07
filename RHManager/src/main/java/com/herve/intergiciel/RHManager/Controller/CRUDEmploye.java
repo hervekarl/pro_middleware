@@ -62,10 +62,8 @@ public class CRUDEmploye {
 
     }
     @GetMapping("/exists/{id}")
-    public ResponseEntity<Boolean> employerExists(@PathVariable Long id) {
-        boolean exists = employeService.employerExists(id);
+    public ResponseEntity<Boolean> employeExists(@PathVariable Long id) {
+        boolean exists = employeService.employeExists(id);
         return ResponseEntity.ok(exists);
     }
-
-
 }

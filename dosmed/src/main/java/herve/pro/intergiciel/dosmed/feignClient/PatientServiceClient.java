@@ -4,19 +4,18 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
-import herve.pro.intergiciel.dosmed.DTO.HistoricalRequest.Patient;
+import herve.pro.intergiciel.dosmed.DTO.Patient;
 
-@FeignClient(name = "service-patient", url = "${patient.service.url}")
+
+@FeignClient(name = "patient-service", url = "${patient.service.url}")
 public interface PatientServiceClient {
     
-    @GetMapping("/patients/{id}")
-    Patient getPatientById(@PathVariable("id") Long id);
+    @GetMapping("/patient/{id}")
+    Patient searchPatientById(@PathVariable Long id);
     
-    @PostMapping("/patients")
-    Patient createPatient(@RequestBody Patient patient);
+    @PostMapping("/patient/exists/{id}")
+    boolean patientExists(@PathVariable Long id);
     
-    // Ajoutez d'autres méthodes selon vos besoins
 }
 

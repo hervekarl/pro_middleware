@@ -13,7 +13,6 @@
 /home/thegriot/Téléchargements/pro/pro_middleware/PatientManager/src/main/java/com/herve/intergiciel/PatientManager/Modeles/Prescriptions.java
 /home/thegriot/Téléchargements/pro/pro_middleware/PatientManager/src/main/java/com/herve/intergiciel/PatientManager/PatientManagerApplication.java
 /home/thegriot/Téléchargements/pro/pro_middleware/PatientManager/src/main/java/com/herve/intergiciel/PatientManager/Repositories/CorsConfig.java
-/home/thegriot/Téléchargements/pro/pro_middleware/PatientManager/src/main/java/com/herve/intergiciel/PatientManager/Repositories/DoctorRepository.java
 /home/thegriot/Téléchargements/pro/pro_middleware/PatientManager/src/main/java/com/herve/intergiciel/PatientManager/Repositories/EmployerClient.java
 /home/thegriot/Téléchargements/pro/pro_middleware/PatientManager/src/main/java/com/herve/intergiciel/PatientManager/Repositories/MedicamentClient.java
 /home/thegriot/Téléchargements/pro/pro_middleware/PatientManager/src/main/java/com/herve/intergiciel/PatientManager/Repositories/PatientRepository.java

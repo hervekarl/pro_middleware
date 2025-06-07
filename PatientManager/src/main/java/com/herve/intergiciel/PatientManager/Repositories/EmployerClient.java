@@ -9,11 +9,12 @@ import com.herve.intergiciel.PatientManager.DTO.DoctorDTO;
 @FeignClient(name = "rh-service", url = "${employer.service.url}")
 public interface EmployerClient {
 
-    @GetMapping("/doctors/{id}")
-    DoctorDTO getDoctorById(@PathVariable Long id);
+    @GetMapping("/rh/employe/{id}")
+    DoctorDTO getEmployeById(@PathVariable Long id);
+
     
-    @GetMapping("/doctors/exists/{id}")
-    boolean doctorExists(@PathVariable Long id);
+    @GetMapping("/rh/employe/exists/{id}")
+    boolean employeExists(@PathVariable Long id);
 
 }
 

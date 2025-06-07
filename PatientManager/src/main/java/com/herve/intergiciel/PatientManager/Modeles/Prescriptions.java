@@ -36,10 +36,7 @@ public class Prescriptions {
 
     private String instructions;
     
-    @ManyToOne
-    @JoinColumn(name = "doctor_id")
-    private Doctor doctor;  // Changé de Long doctorId à Doctor doctor
-
+    private Long doctor;  // Changé de Long doctorId à Doctor doctor
 
     @CreationTimestamp
     @Column(updatable = false, name = "date_prescription")

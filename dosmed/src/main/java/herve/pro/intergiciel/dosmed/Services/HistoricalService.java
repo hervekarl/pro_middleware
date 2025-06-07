@@ -1,7 +1,9 @@
 package herve.pro.intergiciel.dosmed.Services;
 
+import herve.pro.intergiciel.dosmed.DTO.HistoricalRequest;
 import herve.pro.intergiciel.dosmed.Exceptions.HistoricalNotFoundException;
 import herve.pro.intergiciel.dosmed.Repository.HistoricalRepository;
+import herve.pro.intergiciel.dosmed.feignClient.PatientServiceClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
@@ -16,10 +18,24 @@ import java.util.List;
 public class HistoricalService {
 
     private final HistoricalRepository historicalRepository;
+    private final PatientServiceClient patientServiceClient;
 
-    public  Historical createHistorical(Historical historical) {
+    public  Historical createHistorical(HistoricalRequest historical) {
         try {
-            return historicalRepository.save(historical);
+            Historical historicalEntity = new Historical();
+            
+            historicalEntity.setAllergy(historical.getAllergy());
+            historicalEntity.setAntecedent(historical.getAntecedent());
+            historicalEntity.setMalEncours(historical.getMalEncours());
+            historicalEntity.setDocuments(historical.getDocuments());
+            historicalEntity.setPatient(historical.getPatient());
+            if (!patientServiceClient.patientExists(historical.getPatient())) {
+                throw new HistoricalNotFoundException("Patient non trouvé avec l'ID : " + historical.getPatient());
+            } else {
+
+                return historicalRepository.save(historicalEntity);
+            }
+
         } catch (DataIntegrityViolationException e) {
             throw new HistoricalNotFoundException("Violation de contrainte : " + e.getMessage());
         }
@@ -59,4 +75,6 @@ public class HistoricalService {
         }
         historicalRepository.deleteById(id);
     }
+
+
 }
